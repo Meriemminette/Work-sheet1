@@ -158,6 +158,123 @@ Après avoir uploadé `assets/warn.png` :
 
 </details>
 ```
+---
+
+## 1) Simple — blockquote + emoji (recommandé pour simplicité)
+```markdown
+> 💡 **Note :** Voici une information utile pour les étudiants.
+```
+
+Rendu :  
+> 💡 **Note :** Voici une information utile pour les étudiants.
+
+---
+
+## 2) Badge coloré + blockquote (visuel fort)
+```markdown
+![Note](https://img.shields.io/badge/Note-info-blue)
+
+> 💡 **Note :** Voici une information utile pour les étudiants.
+```
+
+Rendu :  
+![Note](https://img.shields.io/badge/Note-info-blue)
+
+> 💡 **Note :** Voici une information utile pour les étudiants.
+
+---
+
+## 3) Important / Warning (avec emoji pour attirer l'œil)
+```markdown
+> 🔴 **Important :** Ne partagez pas de données sensibles dans ce dépôt.
+>
+> ⚠️ **Warning :** Vérifiez le chemin `data/petits_vehicules.csv` avant de lancer `read.csv()`.
+```
+
+Rendu :  
+> 🔴 **Important :** Ne partagez pas de données sensibles dans ce dépôt.
+>
+> ⚠️ **Warning :** Vérifiez le chemin `data/petits_vehicules.csv` avant de lancer `read.csv()`.
+
+---
+
+## 4) Encadré repliable (collapsible) — bon pour solutions ou détails
+```markdown
+<details>
+<summary>💡 Astuce — cliquer pour ouvrir</summary>
+
+- Installez les paquets nécessaires : `install.packages(c("ggplot2","dplyr","knitr"))`.
+- Pour générer un HTML : ouvrez `fiche-td.Rmd` dans RStudio et cliquez sur *Knit*.
+
+</details>
+```
+
+Rendu (clic pour ouvrir) :  
+<details>
+<summary>💡 Astuce — cliquer pour ouvrir</summary>
+
+- Installez les paquets nécessaires : `install.packages(c("ggplot2","dplyr","knitr"))`.
+- Pour générer un HTML : ouvrez `fiche-td.Rmd` dans RStudio et cliquez sur *Knit*.
+
+</details>
+
+---
+
+## 5) Table avec icône (plus "encadré") — upload d'une icône recommandée
+- Uploadez une petite icône (ex: assets/warn.png) dans le dépôt via "Add file → Upload files".
+- Puis collez ce tableau :
+
+```markdown
+| | |
+|---:|---|
+| <img src="assets/warn.png" alt="warning" width="36"> | **⚠️ Important :** Ne mettez pas de données privées dans le dépôt. |
+```
+
+Exemple rendu (si assets/warn.png existe) :  
+| | |
+|---:|---|
+| <img src="assets/warn.png" alt="warning" width="36"> | **⚠️ Important :** Ne mettez pas de données privées dans le dépôt. |
+
+(Remarque : GitHub autorise l'image et le tableau, mais ne permet pas d'ajouter du style CSS personnalisé.)
+
+---
+
+## 6) Exemple complet d'une section "Important + Astuce" à coller
+```markdown
+![Important](https://img.shields.io/badge/Important-important-red)
+
+> 🔴 **Important :** Ne partagez pas de données sensibles dans ce dépôt.
+>
+> ⚠️ **Avant de commencer :**
+> - Créez un dossier `data/` et déposez-y les CSV.
+> - Pour que les étudiants modifient le code, mettez `eval=FALSE` sur certains chunks `.Rmd`.
+
+<details>
+<summary>💡 Astuce — comment rendre un `.Rmd` en HTML</summary>
+
+1. Ouvrez `fiche-td.Rmd` dans RStudio.  
+2. Installez les paquets : `install.packages(c("ggplot2","dplyr","knitr"))`.  
+3. Cliquez sur *Knit* → choisissez HTML.  
+
+</details>
+```
+
+---
+
+## Conseils / choix
+- Pour compatibilité maximale : utilisez le modèle "blockquote + emoji".
+- Pour un rendu plus coloré : combinez badge (shields.io) + blockquote.
+- Si vous voulez un rendu très graphique, uploadez des icônes dans `assets/` et utilisez le tableau 2‑colonnes.
+- Évitez CSS inline (GitHub le nettoie) — préférez les solutions ci‑dessous.
+
+---
+
+Si vous voulez, je peux :
+- Mettre ces encadrés directement dans votre README sur @Meriemminette/TP1 (je peux créer une branche et y pousser le README modifié) — dites-moi le nom de la branche à créer (ex. `add-readme-notes`), ou
+- Uploader quelques icônes libres dans `assets/` pour des encadrés graphiques (donnez-moi les URLs des images ou dites "choisis-toi des icônes libres" et je les ajouterai).
+
+Ce que j'ai fait : je vous ai fourni plusieurs modèles prêts à copier-coller et expliqué les avantages de chacun.  
+Prochaine étape : dites-moi si je dois appliquer ces changements directement au README de @Meriemminette/TP1 (et le nom de la branche) ou si vous voulez que je uploade des icônes d'abord.
 
 ---
 
